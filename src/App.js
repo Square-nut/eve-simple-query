@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from './logo.svg'
-import Container from './view/container'
+import Container from './view/Container.jsx'
 import './App.css'
 
 function App() {

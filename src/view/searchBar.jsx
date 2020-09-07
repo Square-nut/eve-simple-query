@@ -1,14 +1,29 @@
-class Searchbar extends React.Component {
-	constructor(props) {
-		super(props)
+import React from 'react'
+export default class SearchTree extends React.Component {
+	constructor() {
+		this.state = {
+			queryText: '',
+		}
 	}
 	render() {
 		return (
-			<div className="search-bar">
-				<select className="bar-sel dib"></select>
-				<input className="bar-inp dib" type="text"></input>
-				<button className="bar-btn dib">查询</button>
+			<div>
+				<div className="tree-search">
+					<input type="text" className="tree-search-inp" />
+					<input
+						type="button"
+						value="查询"
+						className="tree-search-btn"
+						onClick={() => {
+							this.search
+						}}
+					/>
+				</div>
+				<div className="tree"></div>
 			</div>
 		)
+	}
+	search() {
+		this.setState('queryText') = ''
 	}
 }
